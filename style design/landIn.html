@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>landIn</title>
+    <link rel="stylesheet" href="landIn.css" type="text/css">
+</head>
+<style type="">
+
+</style>
+<!--<script type="application/javascript" src="landIn.js"></script>-->
+<body>
+<p class="landIn">Gu Redo Daze.</p>
+</body>
+
+<script>
+    // "use strict";
+    // const landInTexts = document.querySelectorAll(".landIn");
+    // landInTexts.forEach(function (landInText) {
+    //     var letters = landInText.textContent.split("");
+    //     landInText.textContent = "";
+    //     letters.forEach(function (letter, i) {
+    //         var span = document.createElement("span");
+    //         span.textContent = letter;
+    //         span.style.animationDelay = i * 0.05 + "s";
+    //         landInText.append(span);
+    //     });
+    // });
+
+    let landInTexts = document.querySelectorAll(".landIn");
+    landInTexts.forEach(landInText => {
+        let letters = landInText.textContent.split("");
+        landInText.textContent = "";
+        letters.forEach((letter, i) => {
+            let span = document.createElement("span");
+            span.textContent = letter;
+            span.style.animationDelay = `${i * 0.05}s`;
+            landInText.append(span);
+        });
+    });
+
+</script>
+
+</html>
